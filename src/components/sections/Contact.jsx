@@ -25,11 +25,17 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('https://client3-be-git-main-orcadehubs-projects.vercel.app/api/contact', {
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5500';
+      const res = await fetch(`${API_BASE_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+      // const res = await fetch('https://client3-be-git-main-orcadehubs-projects.vercel.app/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData),
+      // });
 
       const result = await res.json();
 
