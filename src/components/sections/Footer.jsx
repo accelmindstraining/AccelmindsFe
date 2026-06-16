@@ -1,7 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
-// import logo from "./logo.jpeg";
-import Logo from 'C:/Users/riyaz/Downloads/slminds/slminds/fe/public/logo.jpeg';
+// import Logo from 'C:/Users/riyaz/Downloads/slminds/slminds/fe/public/logo.jpeg';
 
 
 const Footer = () => {
@@ -19,7 +18,8 @@ const Footer = () => {
         {/* BRAND */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={Logo} alt="logo" className="h-14 rounded-md" />
+            {/* <img src={Logo} alt="logo" className="h-14 rounded-md" /> */}
+            <img src="/logo.jpeg" alt="Logo" />
             {/* <h3 className="text-xl font-bold bg-gradient-to-r from-[#1C18F5] to-[#4F46FF] bg-clip-text text-transparent">
               AccelMinds
             </h3> */}
