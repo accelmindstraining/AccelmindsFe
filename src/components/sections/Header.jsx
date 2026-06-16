@@ -56,6 +56,7 @@ const Header = () => {
               src="/logo.jpeg"
               alt="logo"
               className="h-12 w-auto"
+              href="/"
             />
           </motion.div>
 

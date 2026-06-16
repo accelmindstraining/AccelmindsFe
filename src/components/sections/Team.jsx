@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Team = () => {
   return (
     <section
-      id="team"
+      id="Team"
       className="py-28 bg-[#f9f9f9] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
