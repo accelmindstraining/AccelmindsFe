@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Logo from '/public/logo.jpeg';
+// import Logo from '/public/logo.jpeg';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,9 +38,9 @@ const Header = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300
       ${scrolled
-        ? 'bg-white/100 backdrop-blur-xl shadow-lg border-b border-gray-200/50'
-        : 'bg-white/100 backdrop-blur-lg border-b border-gray-200/80'
-      }`}
+          ? 'bg-white/100 backdrop-blur-xl shadow-lg border-b border-gray-200/50'
+          : 'bg-white/100 backdrop-blur-lg border-b border-gray-200/80'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center py-4">
@@ -51,7 +51,12 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-3"
           >
-            <img src={Logo} alt="logo" className="h-12 w-auto" />
+            {/* <img src={Logo} alt="logo" className="h-12 w-auto" /> */}
+            <img
+              src="/logo.jpeg"
+              alt="logo"
+              className="h-12 w-auto"
+            />
           </motion.div>
 
           {/* DESKTOP NAV */}
