@@ -1,56 +1,83 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Partners with individual height and width
 const partners = [
-  { src: "/p1.JPG", url: "https://example1.com" },
-  { src: "/orcade.png", url: "https://www.orcadehub.com" },
-  { src: "/p2.JPG", url: "https://example2.com" },
-  { src: "/p3.JPG", url: "https://example3.com" },
+  { src: "/p1.JPG", url: "#" },
+  { src: "/orcade.JPG", url: "https://www.orcadehub.com" },
+  { src: "/p2.JPG", url: "#" },
+  { src: "/p3.JPG", url: "#" },
+  { src: "/p4.JPG", url: "#" },
+  { src: "/Fixityedx.JPG", url: "#" },
+  { src: "/LogicWhilelogo.JPG", url: "#" },
+  { src: "/DIGITALBILLIONAIRE.PNG", url: "#" },
+  { src: "/TaleeoLearning.JPG", url: "#" },
+  { src: "/TalentShine.JPG", url: "#" },
+  { src: "/TechProjectsHub.JPG", url: "#" },
+
 ];
 
-// Duplicate logos for seamless scroll
 const duplicated = [...partners, ...partners];
 
 const Partners = () => {
   return (
-    <section className="bg-white py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto text-center mb-12">
-        <h3 className="text-[#0A1A4C] text-3xl font-bold">Trusted By</h3>
-      </div>
+    <section
+      id="clients"
+      className="py-24 bg-white overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 text-center">
 
-      <div className="relative overflow-hidden">
-        <motion.div
-          className="flex items-center gap-16 animate-scroll-track"
-          style={{ width: "max-content" }}
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            repeat: Infinity,
-            ease: "linear",
-            duration: 20,
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
           }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-sm uppercase tracking-[0.25em] text-[#444656] font-semibold mb-16"
         >
-          {duplicated.map((partner, index) => (
-            <a
-              key={index}
-              href={partner.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0"
-            >
-              <div
-                className="flex items-center justify-center bg-white"
-                style={{ height: "200px", width: "300px" }}
+          Empowering Innovation At
+        </motion.h2>
+
+        {/* Scroll Container */}
+        <div className="relative">
+
+          {/* Left Fade */}
+          <div className="absolute left-0 top-0 w-40 h-full bg-gradient-to-r from-white to-transparent z-20" />
+
+          {/* Right Fade */}
+          <div className="absolute right-0 top-0 w-40 h-full bg-gradient-to-l from-white to-transparent z-20" />
+
+          <motion.div
+            className="flex gap-20 w-max items-center"
+            animate={{
+              x: ["0%", "-50%"],
+            }}
+            transition={{
+              repeat: Infinity,
+              ease: "linear",
+              duration: 22,
+            }}
+          >
+            {duplicated.map((partner, index) => (
+              <a
+                key={index}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center hover:scale-105 transition-all duration-300"
               >
                 <img
                   src={partner.src}
                   alt={`partner-${index}`}
-                  className="object-contain max-h-[80%] max-w-[80%]"
+                  className="h-16 object-contain"
                 />
-              </div>
-            </a>
-          ))}
-        </motion.div>
+              </a>
+            ))}
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
