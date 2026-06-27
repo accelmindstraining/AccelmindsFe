@@ -50,13 +50,11 @@ const Header = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-3"
-          >
-            {/* <img src={Logo} alt="logo" className="h-12 w-auto" /> */}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth", })}>
             <img
               src="/logo.jpeg"
               alt="logo"
               className="h-12 w-auto"
-              href="/"
             />
           </motion.div>
 
@@ -138,7 +136,7 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </header >
   );
 };
 
